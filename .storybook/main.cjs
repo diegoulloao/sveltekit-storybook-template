@@ -13,8 +13,8 @@ module.exports = {
 	},
 	svelteOptions: {
 		preprocess: [preprocessTs()]
-	},
-	features: {
-		storyStoreV7: true
 	}
+	// features: {
+	// 	storyStoreV7: true
+	// }
 };
