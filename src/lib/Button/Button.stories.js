@@ -1,4 +1,5 @@
 import Button from './Button.svelte';
+// import { Button } from '$lib';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 // More on argTypes: https://storybook.js.org/docs/svelte/api/argtypes
