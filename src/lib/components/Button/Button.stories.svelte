@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { Meta, Story, Template } from '@storybook/addon-svelte-csf';
-	import Button from './Button.svelte';
-	// import { Button } from "$lib"
+	import { Button } from '$lib/components';
 
 	const argTypes = {
 		backgroundColor: { control: 'color' },
