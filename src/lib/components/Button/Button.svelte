@@ -1,6 +1,7 @@
 <script lang="ts">
 	import '$lib/components/Button/button.css';
 	import { createEventDispatcher } from 'svelte';
+	import cx from 'classnames';
 
 	/**
 	 * If the button uses tailwind or not
@@ -46,7 +47,7 @@
 
 <button
 	type="button"
-	class={['storybook-button', `storybook-button--${size}`, mode()].join(' ')}
+	class={cx(['storybook-button', `storybook-button--${size}`, mode()])}
 	{style}
 	on:click={onClick}
 >
