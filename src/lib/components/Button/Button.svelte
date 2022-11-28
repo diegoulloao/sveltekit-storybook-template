@@ -2,21 +2,26 @@
 	import './button.css';
 	import { createEventDispatcher } from 'svelte';
 
-	export let tailwind: boolean = false;
+	/**
+	 * If the button uses tailwind or not
+	 */
+	export let tailwind = false;
 
 	/**
 	 * Is this the principal call to action on the page?
 	 */
-	export let primary: boolean = false;
+	export let primary = false;
 
 	/**
 	 * What background color to use
 	 */
 	export let backgroundColor;
+
 	/**
 	 * How large should the button be?
 	 */
 	export let size = 'medium';
+
 	/**
 	 * Button contents
 	 */
