@@ -26,6 +26,7 @@
 </Template>
 
 <Story name="Primary" args={{ label: "Button", primary: true }}/>
+<Story name="Tailwind" args={{ label: "Button using tailwind bg-red-400", tailwind: true }}/>
 <Story name="Secondary" args={{ label: "Button" }} source />
 <Story name="Large" args={{ label: "Button", size: "large" }} />
 <Story name="Small" args={{ label: "Button", size: "small" }} />

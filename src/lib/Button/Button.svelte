@@ -1,6 +1,9 @@
 <script lang="ts">
   import './button.css';
   import { createEventDispatcher } from 'svelte';
+
+  export let tailwind: boolean = false;
+
   /**
    * Is this the principal call to action on the page?
    */
@@ -19,7 +22,10 @@
    */
   export let label = '';
 
-  let mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+  let mode = () => {
+    if (tailwind) return 'bg-red-400 text-white';
+    return primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+  }
 
   let style = backgroundColor ? `background-color: ${backgroundColor}` : '';
 
@@ -35,7 +41,7 @@
 
 <button
   type="button"
-  class={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
+  class={['storybook-button', `storybook-button--${size}`, mode()].join(' ')}
   {style}
   on:click={onClick}>
   {label}
