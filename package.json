@@ -5,6 +5,7 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
+		"prepare": "husky install",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
@@ -16,6 +17,8 @@
 	},
 	"devDependencies": {
 		"@babel/core": "^7.20.2",
+		"@commitlint/cli": "^17.3.0",
+		"@commitlint/config-conventional": "^17.3.0",
 		"@storybook/addon-actions": "^6.5.13",
 		"@storybook/addon-essentials": "^6.5.13",
 		"@storybook/addon-interactions": "^6.5.13",
@@ -33,6 +36,8 @@
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-storybook": "^0.6.7",
 		"eslint-plugin-svelte3": "^4.0.0",
+		"husky": "^8.0.2",
+		"lint-staged": "^13.0.4",
 		"postcss": "^8.4.19",
 		"prettier": "^2.6.2",
 		"prettier-plugin-svelte": "^2.7.0",
@@ -48,5 +53,11 @@
 	"type": "module",
 	"dependencies": {
 		"@storybook/addon-svelte-csf": "^2.0.10"
+	},
+	"lint-staged": {
+		"**/*.(js|jsx|ts|tsx)": [
+			"prettier --write",
+			"yarn format"
+		]
 	}
 }
